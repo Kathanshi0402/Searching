@@ -1,0 +1,28 @@
+n=int(input("Enter number of terms"))
+l=[]
+for i in range(0,n):
+   ele=eval(input("Enter a element"))
+   l.append(ele)
+print(l)
+l.sort()
+print(l)
+find=eval(input("Enter value to find"))
+low = 0
+high = len(l) - 1
+while True:
+    m = low+(find-l[low])*(high-low)
+    mid=m//(l[high]-l[low])
+    if find not in l:
+        print("Not available")
+        break
+    else:
+        if find==l[mid]:
+            print(find,"present at +ve index ", mid," and -ve index ",mid-len(l))
+
+            break
+        else:
+            if find>l[mid]:
+                low=mid+1
+
+            elif find<l[mid]:
+                high=mid-1
