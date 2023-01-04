@@ -1,0 +1,11 @@
+n=int(input("Enter number of terms"))
+l=[]                                  
+for i in range(0,n):
+    ele=eval(input("Enter a element"))
+    l.append(ele)
+print(l)
+
+find=eval(input("Enter a element you want to find"))
+for i in range(len(l)):
+    if find==l[i]:
+        print(find,"is present at +ve index ",i," amd -ve index ",i-len(l))
